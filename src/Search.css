@@ -1,7 +1,4 @@
-.gif {
-  height: 60px;
-}
-
-.gif > img {
-  height: 50px;
+.gifs {
+  display: flex;
+  flex-direction: column;
 }
