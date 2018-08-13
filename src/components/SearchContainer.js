@@ -31,6 +31,20 @@ class SearchContainer extends Component {
     });
   };
 
+  shouldComponentUpdate = (nextProps, nextState) => {
+    if (this.state.query === nextState.query) {
+      return false;
+    }
+    return true;
+  };
+
+  componentDidUpdate = (prevProps, prevState) => {
+    if (prevState.query !== this.state.query) {
+      return true;
+    }
+    return false;
+  };
+
   render() {
     console.log(this.state.gifs);
     return (
@@ -40,6 +54,7 @@ class SearchContainer extends Component {
             Search Gifs
             <input
               id="searchInput"
+              // onKeyUp={this.props.onInput}
               onInput={this.handleInput}
               name="name"
               type="text"
