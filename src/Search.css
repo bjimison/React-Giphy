@@ -1,0 +1,7 @@
+.gif {
+  height: 60px;
+}
+
+.gif > img {
+  height: 50px;
+}
