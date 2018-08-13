@@ -10,9 +10,11 @@ class SearchContainer extends Component {
 
   handleInput = event => {
     let query = event.target.value;
-    this.setState({
-      query
-    });
+    if (query) {
+      this.setState({
+        query: query
+      });
+    }
   };
 
   searchGif = e => {

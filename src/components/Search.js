@@ -11,7 +11,7 @@ class Search extends Component {
     let gifs = this.props.gifs.map((gif, idx) => {
       return (
         <div className="gif" key={idx}>
-          <img src={gif.images.fixed_height_still.url} alt="#" />
+          <img src={gif.images.downsized_large.url} alt="#" />
         </div>
       );
     });
